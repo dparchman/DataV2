@@ -3,7 +3,7 @@ package com.example.datav2;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class Controller1 {
+public class AllTimeController {
     @FXML
     private Label welcomeText;
 
