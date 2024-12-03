@@ -1,4 +1,5 @@
 package com.example.datav2;
 
-public class Controller2 {
+public class PcController {
+
 }
