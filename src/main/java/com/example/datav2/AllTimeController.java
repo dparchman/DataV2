@@ -11,4 +11,5 @@ public class AllTimeController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
 }
