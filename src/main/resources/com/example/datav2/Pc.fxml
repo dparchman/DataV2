@@ -7,24 +7,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.PcController">
    <children>
-      <Label layoutX="213.0" layoutY="14.0" prefHeight="64.0" prefWidth="198.0" text="   Best Selling Pc Games">
+      <Label layoutX="232.0" prefHeight="64.0" prefWidth="198.0" text="   Best Selling Pc Games">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TableView layoutX="73.0" layoutY="75.0" prefHeight="396.0" prefWidth="452.0">
+      <TableView fx:id="Table" layoutX="69.0" layoutY="61.0" prefHeight="460.0" prefWidth="523.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Category" />
-          <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
+          <TableColumn fx:id="TableGame" prefWidth="124.0" text="Game" />
+          <TableColumn fx:id="TableDetails" prefWidth="398.0" text="Details" />
         </columns>
       </TableView>
-      <Button layoutX="46.0" layoutY="479.0" mnemonicParsing="false" text="Previous" />
-      <Button layoutX="523.0" layoutY="479.0" mnemonicParsing="false" text="Next" />
+      <Button fx:id="Prev" layoutX="37.0" layoutY="542.0" mnemonicParsing="false" onAction="#SetPrev" text="Previous" />
+      <Button fx:id="Next" layoutX="570.0" layoutY="542.0" mnemonicParsing="false" onAction="#SetNext" text="Next" />
    </children>
 </Pane>

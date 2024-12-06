@@ -30,7 +30,7 @@ public class bestSellingPc extends Game {
   }
 
   static void readAllData() throws Exception {
-    File dataFile = new File("bestSellingPc");
+    File dataFile = new File("src/main/java/com/example/datav2/bestSellingPc");
     Scanner textScanner = new Scanner(dataFile);
     textScanner.useDelimiter("\n");
     while (textScanner.hasNext()) {
