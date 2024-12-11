@@ -17,12 +17,24 @@ public class bestSellingPc extends Game {
     this.genre = genre;
   }
 
+  public static ArrayList<bestSellingPc> getAllPcGames() {
+    return allPcGames;
+  }
+
+  public static void setAllPcGames(ArrayList<bestSellingPc> allPcGames) {
+    bestSellingPc.allPcGames = allPcGames;
+  }
+
   public String getGenre() {
     return genre;
   }
 
   public void setGenre(String genre) {
     this.genre = genre;
+  }
+
+  public String getToString() {
+    return toString();
   }
 
   public String toString() {
