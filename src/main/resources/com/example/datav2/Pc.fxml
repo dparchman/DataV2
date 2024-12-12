@@ -7,24 +7,25 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.PcController">
    <children>
-      <Label layoutX="213.0" layoutY="14.0" prefHeight="64.0" prefWidth="198.0" text="   Best Selling Pc Games">
+      <Label layoutX="232.0" prefHeight="64.0" prefWidth="198.0" text="   Best Selling Pc Games">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TableView layoutX="73.0" layoutY="75.0" prefHeight="396.0" prefWidth="452.0">
+      <TableView fx:id="Table" layoutX="8.0" layoutY="61.0" prefHeight="460.0" prefWidth="692.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Category" />
-          <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
-            <TableColumn prefWidth="75.0" text="Details" />
+          <TableColumn fx:id="TableGame" prefWidth="98.0" text="Game" />
+          <TableColumn fx:id="TableSales" minWidth="0.0" prefWidth="92.0" text="Sales" />
+            <TableColumn fx:id="TableSeries" minWidth="0.0" prefWidth="95.0" text="Series" />
+            <TableColumn fx:id="TableRelease" minWidth="0.0" prefWidth="93.0" text="Release" />
+            <TableColumn fx:id="TableDeveloper" minWidth="0.0" prefWidth="105.0" text="Developer" />
+            <TableColumn fx:id="TablePublisher" minWidth="0.0" prefWidth="121.0" text="Publisher" />
+            <TableColumn fx:id="TableGenre" minWidth="0.0" prefWidth="87.0" text="Genre" />
         </columns>
       </TableView>
-      <Button layoutX="46.0" layoutY="479.0" mnemonicParsing="false" text="Previous" />
-      <Button layoutX="523.0" layoutY="479.0" mnemonicParsing="false" text="Next" />
+      <Button fx:id="Prev" layoutX="37.0" layoutY="542.0" mnemonicParsing="false" onAction="#SetPrev" text="Previous" />
+      <Button fx:id="Next" layoutX="570.0" layoutY="542.0" mnemonicParsing="false" onAction="#SetNext" text="Next" />
    </children>
 </Pane>

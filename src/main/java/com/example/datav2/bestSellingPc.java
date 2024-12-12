@@ -17,6 +17,14 @@ public class bestSellingPc extends Game {
     this.genre = genre;
   }
 
+  public static ArrayList<bestSellingPc> getAllPcGames() {
+    return allPcGames;
+  }
+
+  public static void setAllPcGames(ArrayList<bestSellingPc> allPcGames) {
+    bestSellingPc.allPcGames = allPcGames;
+  }
+
   public String getGenre() {
     return genre;
   }
@@ -25,12 +33,16 @@ public class bestSellingPc extends Game {
     this.genre = genre;
   }
 
+  public String getToString() {
+    return toString();
+  }
+
   public String toString() {
     return " This game is " + getGame() + " which was released on " + getRelease() + " its sales are " + getSales() + "." + " It is a part of the series " + getSeries() + " which was developed by " + getDeveloper() + " and published by " + getPublisher() + "." + " The genre is " + genre + " . ";
   }
 
   static void readAllData() throws Exception {
-    File dataFile = new File("bestSellingPc");
+    File dataFile = new File("src/main/java/com/example/datav2/bestSellingPc");
     Scanner textScanner = new Scanner(dataFile);
     textScanner.useDelimiter("\n");
     while (textScanner.hasNext()) {
