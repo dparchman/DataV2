@@ -13,7 +13,7 @@ public class bestSellingPc extends Game {
   private static ArrayList<bestSellingPc> allPcGames = new ArrayList<bestSellingPc>();
 
   public bestSellingPc(String game, float sales, String series, LocalDate release, String developer, String publisher, String genre) {
-    super(game, sales, series, release, developer, publisher);
+    super(game, sales, series, release, developer, publisher, 0);
     this.genre = genre;
   }
 

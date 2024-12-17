@@ -10,9 +10,9 @@ import java.io.IOException;
 public class DataEditor extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Pc.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 620);
+        stage.setTitle("Data Editor");
         stage.setScene(scene);
         stage.show();
     }
