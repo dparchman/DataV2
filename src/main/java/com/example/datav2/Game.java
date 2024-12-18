@@ -12,18 +12,17 @@ public class Game {
     private LocalDate release;
     private String developer;
     private String publisher;
+    private int salesInt;
     private Image ImageField;
 
-    public Game(String game, float sales, String series, LocalDate release, String developer, String publisher) {
-
+    public Game(String game, float sales, String series, LocalDate release, String developer, String publisher, int salesInt) {
         this.game = game;
         this.sales = sales;
+        this.salesInt = salesInt;
         this.series = series;
         this.release = release;
         this.developer = developer;
         this.publisher = publisher;
-
-
     }
 
     public Image getImageField() {
@@ -48,6 +47,14 @@ public class Game {
 
     public void setSales(float sales) {
         this.sales = sales;
+    }
+
+    public int getSalesInt() {
+        return salesInt;
+    }
+
+    public void setSalesInt(int salesInt) {
+        this.salesInt = salesInt;
     }
 
     public String getSeries() {
@@ -92,6 +99,6 @@ public class Game {
 
 
     public String toString() {
-        return " \n This game is " +  game + " which was released on " + release + " its sales are " + sales + "." + " It is a part of the series " + series + " which was developed by " + developer + " and published by " + publisher + ".";
+        return " \n This game is " +  game + " which was released on " + release + " its sales are " + salesInt + "." + " It is a part of the series " + series + " which was developed by " + developer + " and published by " + publisher + ".";
     }
 }

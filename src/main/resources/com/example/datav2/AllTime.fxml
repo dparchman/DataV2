@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.datav2.AllTimeController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.AllTimeController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="15.0" layoutY="5.0" prefHeight="25.0" prefWidth="291.0" style="-fx-background-radius: 5; -fx-background-color: #212f3c;" text="Best Selling Games of All Time" textFill="WHITE">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="19.0" />
+            </font>
+        </Label>
+        <TableView fx:id="Table" editable="true" layoutX="12.0" layoutY="38.0" prefHeight="527.0" prefWidth="1164.0" style="-fx-border-radius: 15; -fx-border-color: Black; -fx-border-width: 2;">
+            <columns>
+                <TableColumn fx:id="TableGame" prefWidth="252.27069509029388" text="Game" />
+                <TableColumn fx:id="TableSalesInt" minWidth="0.0" prefWidth="82.2061767578125" text="Sales" />
+                <TableColumn fx:id="TableSeries" minWidth="0.0" prefWidth="128.82461547851562" text="Series" />
+                <TableColumn fx:id="TableRelease" minWidth="0.0" prefWidth="94.80929565429688" text="Release" />
+                <TableColumn fx:id="TablePlatform" minWidth="0.0" prefWidth="112.18292236328125" text="Platform" />
+                <TableColumn fx:id="TableDeveloper" minWidth="0.0" prefWidth="188.64166259765625" text="Developer" />
+                <TableColumn fx:id="TablePublisher" minWidth="0.0" prefWidth="359.35833740234375" text="Publisher" />
+            </columns>
+        </TableView>
+        <Button fx:id="Prev" layoutX="10.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetPrev" text="Previous" />
+        <Button fx:id="Next" layoutX="1150.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetNext" text="Next" />
+        <Button fx:id="Photo" layoutX="669.0" layoutY="603.0" mnemonicParsing="false" onAction="#AddPhoto" text="Photo" />
+        <ImageView fx:id="GameImage" fitHeight="150.0" fitWidth="200.0" layoutX="334.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</Pane>

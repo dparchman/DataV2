@@ -13,8 +13,8 @@ public class bestSellingAllTime extends Game {
     private String platform;
     private static ArrayList<bestSellingAllTime> allTimeGames = new ArrayList<bestSellingAllTime>();
 
-    public bestSellingAllTime(String game, int sales, String series, String platform, LocalDate release, String developer, String publisher) {
-        super(game, sales, series, release, developer, publisher);
+    public bestSellingAllTime(String game, String series, String platform, LocalDate release, String developer, String publisher, int salesInt) {
+        super(game, 0, series, release, developer, publisher, salesInt);
         this.platform = platform;
     }
 
@@ -26,8 +26,12 @@ public class bestSellingAllTime extends Game {
         this.platform = platform;
     }
 
+    public static ArrayList<bestSellingAllTime> getAllTimeGames() {
+        return allTimeGames;
+    }
+
     public String toString() {
-        return " \n This game is " + getGame() + " which was released on " + getRelease() + " its sales are " + getSales() + "." + " It is a part of the series " + getSeries() + " which was developed by " + getDeveloper() + " and published by " + getPublisher() + " . ";
+        return " \n This game is " + getGame() + " which was released on " + getRelease() + " its sales are " + getSalesInt() + "." + " It is a part of the series " + getSeries() + " which was developed by " + getDeveloper() + " and published by " + getPublisher() + " . ";
     }
 
     static void readAllData() throws Exception {
@@ -88,16 +92,17 @@ public class bestSellingAllTime extends Game {
 
 
             String game = data1;
-            int sales = data22;
+            int salesInt = data22;
             String series = data3;
             String platform = data4;
             LocalDate release = date;
             String developer = data6;
             String publisher = data7;
 
-            bestSellingAllTime AllTimeGame = new bestSellingAllTime(game, sales, series, platform, release, developer, publisher);
+            bestSellingAllTime AllTimeGame = new bestSellingAllTime(game,  series, platform, release, developer, publisher, salesInt);
             allTimeGames.add(AllTimeGame);
         }
+        describebestSellingAllTime();
     }
 
             static void describebestSellingAllTime () {
