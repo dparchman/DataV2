@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 
 public class DataEditor extends Application {
@@ -15,6 +16,7 @@ public class DataEditor extends Application {
         stage.setTitle("Data Editor");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
