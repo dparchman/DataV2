@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.PcController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.PcController">
    <children>
       <Label layoutX="311.0" layoutY="-11.0" prefHeight="64.0" prefWidth="198.0" text="   Best Selling Pc Games">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TableView fx:id="Table" editable="true" layoutX="10.0" layoutY="41.0" prefHeight="460.0" prefWidth="824.0">
+      <TableView fx:id="Table" editable="true" layoutX="10.0" layoutY="41.0" prefHeight="373.0" prefWidth="824.0">
         <columns>
           <TableColumn fx:id="TableGame" prefWidth="98.0" text="Game" />
           <TableColumn fx:id="TableSales" minWidth="0.0" prefWidth="98.0" text="Sales" />
@@ -28,6 +28,6 @@
       </TableView>
       <Button fx:id="Swap" layoutX="27.0" layoutY="533.0" mnemonicParsing="false" onAction="#SetSwap" prefHeight="105.0" prefWidth="121.0" text="Swap To AllTime Stats" textAlignment="CENTER" wrapText="true" />
       <Button fx:id="Photo" alignment="CENTER" layoutX="672.0" layoutY="529.0" mnemonicParsing="false" onAction="#AddPhoto" prefHeight="105.0" prefWidth="147.0" text="Photo: Click This Button To Add A Photo For The Game!" textAlignment="CENTER" wrapText="true" />
-      <ImageView fx:id="GameImage" fitHeight="163.0" fitWidth="231.0" layoutX="287.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="GameImage" fitHeight="288.0" fitWidth="300.0" layoutX="260.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>
