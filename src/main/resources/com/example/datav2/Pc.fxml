@@ -26,8 +26,9 @@
             <TableColumn fx:id="TableGenre" minWidth="0.0" prefWidth="131.0" text="Genre" />
         </columns>
       </TableView>
-      <Button fx:id="Swap" layoutX="27.0" layoutY="533.0" mnemonicParsing="false" onAction="#SetSwap" prefHeight="105.0" prefWidth="121.0" text="Swap To AllTime Stats" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="Swap" layoutX="29.0" layoutY="457.0" mnemonicParsing="false" onAction="#SetSwap" prefHeight="105.0" prefWidth="121.0" text="Swap To AllTime Stats" textAlignment="CENTER" wrapText="true" />
       <Button fx:id="Photo" alignment="CENTER" layoutX="672.0" layoutY="529.0" mnemonicParsing="false" onAction="#AddPhoto" prefHeight="105.0" prefWidth="147.0" text="Photo: Click This Button To Add A Photo For The Game!" textAlignment="CENTER" wrapText="true" />
       <ImageView fx:id="GameImage" fitHeight="288.0" fitWidth="300.0" layoutX="260.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="SwapHome" layoutX="29.0" layoutY="591.0" mnemonicParsing="false" onAction="#SetSwapHome" prefHeight="105.0" prefWidth="121.0" text="View Home Screen" textAlignment="CENTER" wrapText="true" />
    </children>
 </Pane>

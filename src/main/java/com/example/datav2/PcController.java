@@ -29,6 +29,7 @@ public class PcController {
     public ImageView GameImage;
     public Button Swap;
     public Button Photo;
+    public Button SwapHome;
     public TableColumn<bestSellingPc, String> TableGame;
     public TableColumn<bestSellingPc, Float> TableSales;
     public TableColumn<bestSellingPc, String> TableSeries;
@@ -144,6 +145,13 @@ public class PcController {
         Stage mainStage = (Stage)Swap.getScene().getWindow();
         mainStage.setScene(AllTime);
     }
+    public void SetSwapHome() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
+        Scene AllTime = new Scene(fxmlLoader.load(), 1000, 400);
+        Stage mainStage = (Stage)SwapHome.getScene().getWindow();
+        mainStage.setScene(AllTime);
+    }
+
 
     public void AddPhoto() throws Exception {
 
