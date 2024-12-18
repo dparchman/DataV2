@@ -146,8 +146,8 @@ public class PcController {
 
         FileChooser fileChooser = new FileChooser();
         File selectedFile = fileChooser.showOpenDialog(GameImage.getScene().getWindow());
-        FileInputStream input8 = new FileInputStream(selectedFile);
-        Image imageExtra = new Image(input8);
+        FileInputStream input = new FileInputStream(selectedFile);
+        Image imageExtra = new Image(input);
         GameImage.setImage(imageExtra);
         bestSellingPc pcGame = Table.getSelectionModel().getSelectedItem();
         pcGame.setImageField(imageExtra);

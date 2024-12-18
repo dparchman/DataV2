@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -27,5 +28,7 @@
         </TableView>
         <Button fx:id="Prev" layoutX="10.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetPrev" text="Previous" />
         <Button fx:id="Next" layoutX="1150.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetNext" text="Next" />
+        <Button fx:id="Photo" layoutX="669.0" layoutY="603.0" mnemonicParsing="false" onAction="#AddPhoto" text="Photo" />
+        <ImageView fx:id="GameImage" fitHeight="150.0" fitWidth="200.0" layoutX="334.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </Pane>
