@@ -27,7 +27,6 @@ public class PcController {
     public Button Prev;
     public Button Next;
     public Button Photo;
-    Image imageExtra;
     public TableColumn<bestSellingPc, String> TableGame;
     public TableColumn<bestSellingPc, Float> TableSales;
     public TableColumn<bestSellingPc, String> TableSeries;
@@ -43,6 +42,7 @@ public class PcController {
                     // newValue can be null if nothing IS NOW selected
                     System.out.println("TableView select oldValue: " + oldValue);
                     System.out.println("TableView select newValue: " + newValue);
+                    GameImage.setImage(newValue.getImageField());
                 });
 
         bestSellingPc.readAllData();
@@ -147,7 +147,7 @@ public class PcController {
         FileChooser fileChooser = new FileChooser();
         File selectedFile = fileChooser.showOpenDialog(GameImage.getScene().getWindow());
         FileInputStream input8 = new FileInputStream(selectedFile);
-        imageExtra = new Image(input8);
+        Image imageExtra = new Image(input8);
         GameImage.setImage(imageExtra);
         bestSellingPc pcGame = Table.getSelectionModel().getSelectedItem();
         pcGame.setImageField(imageExtra);
