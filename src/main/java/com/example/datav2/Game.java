@@ -1,5 +1,7 @@
 package com.example.datav2;
 
+import javafx.scene.image.Image;
+
 import java.time.LocalDate;
 public class Game {
 
@@ -11,7 +13,7 @@ public class Game {
     private String developer;
     private String publisher;
     private int salesInt;
-
+    private Image ImageField;
 
     public Game(String game, float sales, String series, LocalDate release, String developer, String publisher, int salesInt) {
         this.game = game;
@@ -21,6 +23,14 @@ public class Game {
         this.release = release;
         this.developer = developer;
         this.publisher = publisher;
+    }
+
+    public Image getImageField() {
+        return ImageField;
+    }
+
+    public void setImageField(Image imageField) {
+        ImageField = imageField;
     }
 
     public String getGame() {
@@ -35,7 +45,7 @@ public class Game {
         return sales;
     }
 
-    public void setSales(int sales) {
+    public void setSales(float sales) {
         this.sales = sales;
     }
 
