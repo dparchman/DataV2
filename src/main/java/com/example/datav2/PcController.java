@@ -141,15 +141,15 @@ public class PcController {
 
     public void SetSwap() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
-        Scene AllTime = new Scene(fxmlLoader.load(), 1000, 400);
+        Scene AllTime = new Scene(fxmlLoader.load(), 850, 750);
         Stage mainStage = (Stage)Swap.getScene().getWindow();
         mainStage.setScene(AllTime);
     }
     public void SetSwapHome() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
-        Scene AllTime = new Scene(fxmlLoader.load(), 1000, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Home.fxml"));
+        Scene Home = new Scene(fxmlLoader.load(), 850, 750);
         Stage mainStage = (Stage)SwapHome.getScene().getWindow();
-        mainStage.setScene(AllTime);
+        mainStage.setScene(Home);
     }
 
 

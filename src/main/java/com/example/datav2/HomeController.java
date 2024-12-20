@@ -34,14 +34,14 @@ public class HomeController {
     public void SetViewPC() throws Exception{
 
         FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Pc.fxml"));
-        Scene AllTime = new Scene(fxmlLoader.load(), 1000, 400);
+        Scene AllTime = new Scene(fxmlLoader.load(), 850, 750);
         Stage mainStage = (Stage)ViewPC.getScene().getWindow();
         mainStage.setScene(AllTime);
     }
     public void setViewAllTime() throws Exception {
 
         FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
-        Scene AllTime = new Scene(fxmlLoader.load(), 1000, 400);
+        Scene AllTime = new Scene(fxmlLoader.load(), 850, 750);
         Stage mainStage = (Stage) ViewAllTime.getScene().getWindow();
         mainStage.setScene(AllTime);
     }
