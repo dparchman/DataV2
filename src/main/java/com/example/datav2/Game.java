@@ -1,9 +1,12 @@
 package com.example.datav2;
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
+import javax.imageio.ImageIO;
+import java.io.*;
 import java.time.LocalDate;
-public class Game {
+public class Game implements Serializable {
 
     // fields
     private String game;
@@ -13,7 +16,7 @@ public class Game {
     private String developer;
     private String publisher;
     private int salesInt;
-    private Image ImageField;
+    private transient Image ImageField;
 
     public Game(String game, float sales, String series, LocalDate release, String developer, String publisher, int salesInt) {
         this.game = game;
@@ -95,6 +98,32 @@ public class Game {
             return true;
         }
         return false;
+    }
+    // implements custom serialize for
+    //     transient posterImage field
+    @Serial
+    private void writeObject(ObjectOutputStream s) throws IOException {
+        // write NON-transient fields
+        s.defaultWriteObject();
+        // write transient fields
+        if (ImageField != null) {
+            ImageIO.write(SwingFXUtils.fromFXImage(ImageField, null), "png", s);
+        }
+    }
+    // implements custom deserialize for
+//     transient posterImage field
+    @Serial
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
+// read NON-transient fields
+        s.defaultReadObject();
+        // read transient fields
+        Image PcPoster = null;
+        try {
+            PcPoster = SwingFXUtils.toFXImage(ImageIO.read(s), null);
+        } catch (Exception ex) {
+            // do nothing
+        }
+        ImageField = PcPoster;
     }
 
 

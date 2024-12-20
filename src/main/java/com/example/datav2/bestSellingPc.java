@@ -1,14 +1,19 @@
 package com.example.datav2;
 
-import java.io.File;
+import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class bestSellingPc extends Game {
 
+
+public class bestSellingPc extends Game implements Serializable {
+  private static final long serialVersionUID = 1L;
   private String genre;
   private static ArrayList<bestSellingPc> allPcGames = new ArrayList<bestSellingPc>();
 
@@ -120,12 +125,31 @@ public class bestSellingPc extends Game {
 
       bestSellingPc pcGame = new bestSellingPc(game, sales, series, date, developer, publisher, genre);
       allPcGames.add(pcGame);
-    }
-  }
-    static void describeAllPC() {
-      for (bestSellingPc pcgame: allPcGames) {
-        System.out.println(pcgame);
-      }
+
     }
 
   }
+
+  static void describeAllPC() {
+    for (bestSellingPc pcgame : allPcGames) {
+      System.out.println(pcgame);
+    }
+  }
+
+  static void saveData() throws Exception {
+    FileOutputStream fileOut = new FileOutputStream("PcSave");
+    ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+    objectOut.writeObject(allPcGames);
+    objectOut.close();
+    fileOut.close();
+
+  }
+  static void restoreData() throws Exception {
+    FileInputStream fileIn = new FileInputStream("PcSave");
+    ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+    allPcGames = (ArrayList<bestSellingPc>) objectIn.readObject();
+    objectIn.close();
+    fileIn.close();
+  }
+
+}

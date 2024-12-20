@@ -48,7 +48,27 @@ public class PcController {
                     GameImage.setImage(newValue.getImageField());
                 });
 
-        bestSellingPc.readAllData();
+        if (bestSellingPc.getAllPcGames().isEmpty()) {
+            try {
+// only restore saved Objects ONCE
+                bestSellingPc.restoreData();
+            } catch (Exception ex) {
+                System.out.println("NO SAVED OBJECTS WERE RESTORED: " + ex);
+            }
+
+            if (bestSellingPc.getAllPcGames().isEmpty()) {
+                try {
+                    // only import films' data if there are NO saved Objects
+                    bestSellingPc.readAllData();
+                    System.out.println("DATA IMPORTED");
+                } catch (Exception ex) {
+                    System.out.println("DATA NOT IMPORTED: " + ex);
+                }
+            } else {
+                System.out.println("SAVED OBJECTS RESTORED");
+            }
+        }
+
         TableGame.setCellValueFactory(
                 new PropertyValueFactory<>("game"));
 
@@ -83,6 +103,7 @@ public class PcController {
         TableGenre.setCellFactory(TextFieldTableCell.forTableColumn());
 
         TableRelease.setCellFactory(TextFieldTableCell.forTableColumn(new LocalDateStringConverter()));
+
 
         TableGame.setOnEditCommit(
                 (TableColumn.CellEditEvent<bestSellingPc, String> t) -> {
@@ -137,6 +158,7 @@ public class PcController {
             Table.getItems().add(pcGame);
         }
 
+
     }
 
     public void SetSwap() throws Exception {
@@ -164,4 +186,5 @@ public class PcController {
         pcGame.setImageField(imageExtra);
 
     }
+
 }

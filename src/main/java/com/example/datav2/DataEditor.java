@@ -16,8 +16,12 @@ public class DataEditor extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public void stop() throws Exception {
+        bestSellingPc.saveData();
+    }
 
     public static void main(String[] args) {
         launch();
     }
 }
+
