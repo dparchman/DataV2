@@ -174,9 +174,7 @@ public class PcController {
         mainStage.setScene(Home);
     }
 
-
     public void AddPhoto() throws Exception {
-
         FileChooser fileChooser = new FileChooser();
         File selectedFile = fileChooser.showOpenDialog(GameImage.getScene().getWindow());
         FileInputStream input = new FileInputStream(selectedFile);

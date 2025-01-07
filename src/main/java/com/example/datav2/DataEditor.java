@@ -11,7 +11,7 @@ public class DataEditor extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Home.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 850, 750);
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 750);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

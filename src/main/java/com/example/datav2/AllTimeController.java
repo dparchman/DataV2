@@ -1,6 +1,8 @@
 package com.example.datav2;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -10,6 +12,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.converter.FloatStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import javafx.util.converter.LocalDateStringConverter;
@@ -24,9 +27,9 @@ public class AllTimeController {
 
     public TableView<bestSellingAllTime> Table;
     public ImageView GameImage;
-    public Button Prev;
-    public Button Next;
+    public Button Swap;
     public Button Photo;
+    public Button SwapHome;
     public TableColumn<bestSellingAllTime, String> TableGame;
     public TableColumn<bestSellingAllTime, Integer> TableSalesInt;
     public TableColumn<bestSellingAllTime, String> TableSeries;
@@ -143,6 +146,19 @@ public class AllTimeController {
     public void SetNext() throws Exception {
 
     }
+    public void SetSwap() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Pc.fxml"));
+        Scene AllTime = new Scene(fxmlLoader.load(), 850, 750);
+        Stage mainStage = (Stage)Swap.getScene().getWindow();
+        mainStage.setScene(AllTime);
+    }
+    public void SetSwapHome() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("Home.fxml"));
+        Scene Home = new Scene(fxmlLoader.load(), 850, 750);
+        Stage mainStage = (Stage)SwapHome.getScene().getWindow();
+        mainStage.setScene(Home);
+    }
+
     public void AddPhoto() throws Exception {
 
         FileChooser fileChooser = new FileChooser();

@@ -6,9 +6,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.AllTimeController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.datav2.AllTimeController">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="15.0" layoutY="5.0" prefHeight="25.0" prefWidth="291.0" style="-fx-background-radius: 5; -fx-background-color: #212f3c;" text="Best Selling Games of All Time" textFill="WHITE">
             <font>
@@ -26,9 +27,10 @@
                 <TableColumn fx:id="TablePublisher" minWidth="0.0" prefWidth="359.35833740234375" text="Publisher" />
             </columns>
         </TableView>
-        <Button fx:id="Prev" layoutX="10.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetPrev" text="Previous" />
-        <Button fx:id="Next" layoutX="1150.0" layoutY="585.0" mnemonicParsing="false" onAction="#SetNext" text="Next" />
-        <Button fx:id="Photo" layoutX="669.0" layoutY="603.0" mnemonicParsing="false" onAction="#AddPhoto" text="Photo" />
-        <ImageView fx:id="GameImage" fitHeight="150.0" fitWidth="200.0" layoutX="334.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="Swap" layoutX="15.0" layoutY="665.0" mnemonicParsing="false" onAction="#SetSwap" prefHeight="70.0" prefWidth="130.0" text="Switch View" />
+        <Button fx:id="SwapHome" layoutX="15.0" layoutY="580.0" mnemonicParsing="false" onAction="#SetSwapHome" prefHeight="70.0" prefWidth="130.0" text="Home" />
+        <Button fx:id="Photo" layoutX="1050.0" layoutY="580.0" mnemonicParsing="false" onAction="#AddPhoto" prefHeight="155.0" prefWidth="130.0" text="Add Photo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="150.0" layoutX="490.0" layoutY="585.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" width="200.0" />
+        <ImageView fx:id="GameImage" fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </Pane>

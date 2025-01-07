@@ -41,7 +41,7 @@ public class HomeController {
     public void setViewAllTime() throws Exception {
 
         FXMLLoader fxmlLoader = new FXMLLoader(DataEditor.class.getResource("AllTime.fxml"));
-        Scene AllTime = new Scene(fxmlLoader.load(), 850, 750);
+        Scene AllTime = new Scene(fxmlLoader.load(), 1190, 750);
         Stage mainStage = (Stage) ViewAllTime.getScene().getWindow();
         mainStage.setScene(AllTime);
     }
